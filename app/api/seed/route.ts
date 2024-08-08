@@ -2,8 +2,8 @@ import { createClient } from "@supabase/supabase-js";
 import { Database } from "@/types/database.types";
 
 const supabase = createClient<Database>(
-    process.env.SUPABASE_URL,
-    process.env.SUPABASE_SERVICE_KEY
+    process.env.SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_KEY!
 );
 
 export async function GET(req: Request, res: Response): Promise<Response> {
