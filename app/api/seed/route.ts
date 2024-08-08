@@ -6,8 +6,8 @@ const supabase = createClient<Database>(
     process.env.SUPABASE_SERVICE_KEY
 );
 
-export async function GET(req: Request, res: Response) {
-    const rows: Database['public']['Tables']['sensor']['Insert'][] = Array.from({ length: 12 }).map(() => ({
+export async function GET(req: Request, res: Response): Promise<Response> {
+    const rows: Database['public']['Tables']['sensor']['Insert'][] = Array.from({ length: 8640 }).map(() => ({
         lumen: 15.5,
         moist: 12,
         soil: 20.3,
