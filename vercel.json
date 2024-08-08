@@ -1,6 +1,6 @@
 {
   "crons": [{
     "path": "/api/seed",
-    "schedule": "* * * * *"
+    "schedule": "0 1 * * *"
   }]
 }
